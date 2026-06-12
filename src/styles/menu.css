@@ -1,0 +1,18 @@
+/* menu.css — menu management grid & card */
+
+.mm-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--gap); }
+
+.mm-card { overflow: hidden; transition: all .15s var(--tap); }
+.mm-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.mm-card.off { opacity: .68; }
+
+.mm-tags { position: absolute; top: 10px; left: 10px; display: flex; gap: 6px; }
+
+.mm-edit {
+  position: absolute; top: 10px; right: 10px;
+  width: 30px; height: 30px; border-radius: 8px; border: 0;
+  background: rgba(255,255,255,.92); color: #1C1917;
+  display: grid; place-items: center; cursor: pointer;
+  box-shadow: var(--shadow-sm); opacity: 0; transition: opacity .15s;
+}
+.mm-card:hover .mm-edit { opacity: 1; }

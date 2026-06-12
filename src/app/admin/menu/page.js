@@ -1,3 +1,5 @@
-export default function MenuPage() {
-  return <div>Menu management — coming soon</div>;
+import MenuPage from '@/components/menu/MenuPage';
+
+export default function AdminMenuPage() {
+  return <MenuPage />;
 }
