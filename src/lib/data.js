@@ -53,6 +53,26 @@ export const CHANNELS = [
   { label: 'Pre-order', v: 12, color: 'var(--violet)' },
 ];
 
+export const BILLING_HISTORY = [
+  { id: 'INV-2026-0612', date: 'Jun 1, 2026', plan: 'Pro · Monthly', amount: 399000, status: 'Paid' },
+  { id: 'INV-2026-0511', date: 'May 1, 2026', plan: 'Pro · Monthly', amount: 399000, status: 'Paid' },
+  { id: 'INV-2026-0410', date: 'Apr 1, 2026', plan: 'Pro · Monthly', amount: 399000, status: 'Paid' },
+  { id: 'INV-2026-0309', date: 'Mar 1, 2026', plan: 'Starter · Monthly', amount: 149000, status: 'Paid' },
+];
+
+export const BRANCHES = [
+  { id: 'b1', name: 'Seminyak (Flagship)', address: 'Jl. Kayu Aya No. 21', tables: 18, status: 'Open', today: 4280000 },
+  { id: 'b2', name: 'Canggu', address: 'Jl. Pantai Batu Bolong 58', tables: 12, status: 'Open', today: 3120000 },
+  { id: 'b3', name: 'Ubud', address: 'Jl. Monkey Forest 9', tables: 10, status: 'Closed', today: 0 },
+];
+
+export const STAFF = [
+  { id: 's1', name: 'Maya Pradnya', email: 'maya@kopisenja.id', role: 'Owner', branch: 'All outlets', active: true },
+  { id: 's2', name: 'Arif Rahman', email: 'arif@kopisenja.id', role: 'Manager', branch: 'Seminyak', active: true },
+  { id: 's3', name: 'Sienna Tan', email: 'sienna@kopisenja.id', role: 'Barista', branch: 'Seminyak', active: true },
+  { id: 's4', name: 'Lukas Brata', email: 'lukas@kopisenja.id', role: 'Cashier', branch: 'Canggu', active: false },
+];
+
 export const HOURLY = [
   { h: '7a', v: 12 }, { h: '8a', v: 34 }, { h: '9a', v: 41 }, { h: '10a', v: 28 },
   { h: '11a', v: 22 }, { h: '12p', v: 38 }, { h: '1p', v: 31 }, { h: '2p', v: 19 },

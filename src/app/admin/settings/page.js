@@ -1,3 +1,5 @@
-export default function SettingsPage() {
-  return <div>Settings — coming soon</div>;
+import SettingsPage from '@/components/settings/SettingsPage';
+
+export default function AdminSettingsPage() {
+  return <SettingsPage />;
 }
