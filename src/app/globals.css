@@ -5,6 +5,7 @@
 @import "../styles/landing.css";
 @import "../styles/orders.css";
 @import "../styles/menu.css";
+@import "../styles/qr.css";
 
 /* dashboard animations */
 .stat.flash { animation: statflash .9s var(--tap); }
