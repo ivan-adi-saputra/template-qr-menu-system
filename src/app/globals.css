@@ -3,3 +3,16 @@
 @import "../styles/shell.css";
 @import "../styles/customer.css";
 @import "../styles/landing.css";
+
+/* dashboard animations */
+.stat.flash { animation: statflash .9s var(--tap); }
+@keyframes statflash {
+  0%   { box-shadow: 0 0 0 0 var(--ring); }
+  30%  { box-shadow: 0 0 0 4px var(--ring); }
+  100% { box-shadow: var(--shadow-sm); }
+}
+.row-fresh { animation: rowfresh 1.6s ease; }
+@keyframes rowfresh {
+  0%, 40% { background: var(--accent-soft); }
+  100%     { background: transparent; }
+}

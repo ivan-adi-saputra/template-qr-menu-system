@@ -1,3 +1,5 @@
-export default function DashboardPage() {
-  return <div>Dashboard — coming soon</div>;
+import DashboardPage from '@/components/dashboard/DashboardPage';
+
+export default function AdminPage() {
+  return <DashboardPage />;
 }

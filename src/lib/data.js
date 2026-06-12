@@ -53,6 +53,12 @@ export const CHANNELS = [
   { label: 'Pre-order', v: 12, color: 'var(--violet)' },
 ];
 
+export const HOURLY = [
+  { h: '7a', v: 12 }, { h: '8a', v: 34 }, { h: '9a', v: 41 }, { h: '10a', v: 28 },
+  { h: '11a', v: 22 }, { h: '12p', v: 38 }, { h: '1p', v: 31 }, { h: '2p', v: 19 },
+  { h: '3p', v: 24 }, { h: '4p', v: 33 }, { h: '5p', v: 29 }, { h: '6p', v: 17 },
+];
+
 export const PLANS = [
   { id: 'free', name: 'Free', price: 0, tagline: 'Test the waters', features: ['1 outlet', 'Up to 20 menu items', '5 QR tables', 'Basic order list', 'Ordio branding'], cta: 'Current plan' },
   { id: 'starter', name: 'Starter', price: 149000, tagline: 'New cafes finding rhythm', features: ['1 outlet', 'Unlimited menu items', '15 QR tables', 'Live order board', 'Daily analytics', 'Remove Ordio branding'], cta: 'Choose Starter' },
