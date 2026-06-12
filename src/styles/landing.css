@@ -85,6 +85,7 @@
 
 /* ── billing plan cards (shared landing + billing page) ──────────── */
 .bl-plan { position: relative; }
+.bl-plan.pop { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent), var(--shadow-md); }
 .bl-pop { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #fff; font-size: var(--fs-xs); font-weight: 700; padding: 4px 12px; border-radius: 999px; white-space: nowrap; }
 .bl-feat { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 9px; }
 .bl-feat li { display: flex; align-items: center; gap: 9px; font-size: var(--fs-sm); }

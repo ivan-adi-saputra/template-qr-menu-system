@@ -1,3 +1,5 @@
-export default function BillingPage() {
-  return <div>Billing — coming soon</div>;
+import BillingPage from '@/components/billing/BillingPage';
+
+export default function AdminBillingPage() {
+  return <BillingPage />;
 }
