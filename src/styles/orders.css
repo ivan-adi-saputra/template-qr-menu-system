@@ -1,0 +1,32 @@
+/* orders.css — kanban board, list, detail drawer */
+
+.ob-pill { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-pill); padding: 7px 14px; }
+
+/* ── kanban board ────────────────────────────────────────────────── */
+.ob-board { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; align-items: start; }
+@media (max-width: 1100px) { .ob-board { grid-template-columns: 1fr 1fr; } }
+
+.ob-col { background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--r); display: flex; flex-direction: column; max-height: calc(100vh - 220px); }
+.ob-col-hd { display: flex; align-items: center; justify-content: space-between; padding: 13px 14px; border-bottom: 1px solid var(--border); }
+.ob-count { background: var(--surface); border: 1px solid var(--border); min-width: 24px; height: 22px; border-radius: 999px; display: grid; place-items: center; font-size: 12px; font-weight: 700; padding: 0 7px; }
+.ob-col-bd { padding: 10px; display: flex; flex-direction: column; gap: 10px; overflow-y: auto; min-height: 80px; }
+.ob-empty { text-align: center; color: var(--faint); font-size: var(--fs-sm); padding: 24px 0; }
+
+/* ── order card ──────────────────────────────────────────────────── */
+.ob-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-sm); padding: 13px; cursor: pointer; transition: all .14s var(--tap); box-shadow: var(--shadow-xs); }
+.ob-card:hover { border-color: var(--border-2); box-shadow: var(--shadow-sm); transform: translateY(-1px); }
+.ob-card.fresh { border-color: var(--accent); box-shadow: 0 0 0 3px var(--ring); animation: obnew 2s ease; }
+@keyframes obnew { 0%, 30% { background: var(--accent-soft); } 100% { background: var(--surface); } }
+.ob-items { margin-top: 9px; padding-top: 9px; border-top: 1px dashed var(--border-2); }
+
+/* ── detail drawer ───────────────────────────────────────────────── */
+.drawer-scrim { position: fixed; inset: 0; background: rgba(28,25,23,.42); backdrop-filter: blur(3px); z-index: 200; display: flex; justify-content: flex-end; animation: fade .2s ease; }
+[data-theme="dark"] .drawer-scrim { background: rgba(0,0,0,.6); }
+.drawer { width: 440px; max-width: 92vw; background: var(--surface); height: 100%; padding: 24px; overflow-y: auto; box-shadow: var(--shadow-pop); animation: drawerin .28s var(--tap); border-left: 1px solid var(--border); }
+
+/* ── order step indicators (drawer) ─────────────────────────────── */
+.ob-steps { display: flex; align-items: center; justify-content: space-between; position: relative; padding: 4px 13px; }
+.ob-steps::before { content: ''; position: absolute; left: 28px; right: 28px; top: 50%; height: 2px; background: var(--border-2); }
+.ob-stepdot { position: relative; z-index: 1; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; font-family: var(--data); font-weight: 700; font-size: 12px; border: 2px solid var(--border-2); color: var(--muted); background: var(--surface); flex: none; }
+.ob-stepdot[data-on="1"]  { background: var(--green); border-color: var(--green); color: #fff; }
+.ob-stepdot[data-cur="1"] { background: var(--accent); border-color: var(--accent); color: #fff; box-shadow: 0 0 0 4px var(--ring); }
